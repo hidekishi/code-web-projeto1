@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="projeto.css">
+</head>
+<body>
+    <header>
+        <h1>
+            <img src="https://cdn-icons-png.flaticon.com/512/3176/3176363.png" alt="Tarefas" style="height: 40px; vertical-align: middle;"> Lista de Tarefas
+        </h1>
+        <a href="https://github.com/CodeWebofc/Aulas/tree/main">Sobre</a>
+    </header>
+    <nav>
+        <ul>
+            <li>Todas</li>
+            <li>Pendentes</li>
+            <li>Concluídas</li>
+        </ul>
+    </nav>
+    <main>
+        <form id="form-tarefa">
+            <input type="text" id="nova-tarefa" placeholder="Adicionar nova tarefa" required>
+            <button type="submit">Adicionar</button>
+        </form>
+        <ul id="lista-tarefas">
+            <li class="pendente">
+                Comprar pão
+                <span>
+                    <button>✔</button>
+                    <button>🗑</button>
+                </span>
+            </li>
+            <li class="pendente">
+                Estudar para prova
+                <span>
+                    <button>✔</button>
+                    <button>🗑</button>
+                </span>
+            </li>
+            <li class="concluída">
+                Lavar a louça
+                <span>
+                    <button disabled>✔</button>
+                    <button>🗑</button>
+                </span>
+            </li>
+        </ul>
+        <table>
+            <thead>
+                <tr>
+                    <th>Total</th>
+                    <th>Pendentes</th>
+                    <th>Concluídas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="total-tarefas">3</td>
+                    <td id="pendentes-tarefas">2</td>
+                    <td id="concluidas-tarefas">1</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>&copy; 2025 Lista de Tarefas</p>
+    </footer>
+</body>
+</html>
