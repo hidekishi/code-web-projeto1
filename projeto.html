@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefas</title>
     <link rel="stylesheet" href="projeto.css">
+    <script src="projeto.js" defer></script> <!-- Add this line -->
 </head>
 <body>
     <header>
@@ -21,49 +22,33 @@
         </ul>
     </nav>
     <main>
-        <form id="form-tarefa">
-            <input type="text" id="nova-tarefa" placeholder="Adicionar nova tarefa" required>
-            <button type="submit">Adicionar</button>
-        </form>
-        <ul id="lista-tarefas">
-            <li class="pendente">
-                Comprar pão
-                <span>
-                    <button>✔</button>
-                    <button>🗑</button>
-                </span>
-            </li>
-            <li class="pendente">
-                Estudar para prova
-                <span>
-                    <button>✔</button>
-                    <button>🗑</button>
-                </span>
-            </li>
-            <li class="concluída">
-                Lavar a louça
-                <span>
-                    <button disabled>✔</button>
-                    <button>🗑</button>
-                </span>
-            </li>
-        </ul>
-        <table>
-            <thead>
-                <tr>
-                    <th>Total</th>
-                    <th>Pendentes</th>
-                    <th>Concluídas</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td id="total-tarefas">3</td>
-                    <td id="pendentes-tarefas">2</td>
-                    <td id="concluidas-tarefas">1</td>
-                </tr>
-            </tbody>
-        </table>
+        <div style="display: flex; align-items: flex-start; gap: 16px; width: 100%; justify-content: center; max-width: 700px; margin: 0 auto;">
+            <div style="flex: 2;">
+                <form id="form-tarefa">
+                    <input type="text" id="nova-tarefa" placeholder="Adicionar nova tarefa" required>
+                    <button type="submit">Adicionar</button>
+                </form>
+                <ul id="lista-tarefas">
+                    <!-- Lista começa vazia, itens serão adicionados via JS -->
+                </ul>
+            </div>
+            <table style="flex: 1; min-width: 140px; max-width: 180px;">
+                <thead>
+                    <tr>
+                        <th>Total</th>
+                        <th>Pendentes</th>
+                        <th>Concluídas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="total-tarefas">3</td>
+                        <td id="pendentes-tarefas">2</td>
+                        <td id="concluidas-tarefas">1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </main>
     <footer>
         <p>&copy; 2025 Lista de Tarefas</p>

@@ -1,4 +1,3 @@
-
 /* Header e footer fixos e centralizados */
 header, footer {
     position: fixed;
@@ -100,6 +99,9 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-height: 250px; /* Adjust height as needed */
+    overflow-y: auto;
+    width: 100%;
 }
 #lista-tarefas li {
     background: #fff;
